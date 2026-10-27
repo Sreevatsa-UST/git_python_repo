@@ -1,0 +1,453 @@
+This is how I would structure the framework if I were building it as a real-world QA Automation Framework from scratch for learning, reusability, and future project readiness.
+
+Framework Vision
+
+Tech Stack
+
+Python
+Playwright
+Behave (BDD)
+Git
+Allure Reporting
+Logging
+Data Driven Testing
+CI/CD
+Scheduled Execution
+
+Application Under Test
+
+GitHub (https://github.com)
+
+Framework Goal
+
+Instead of writing:
+
+page.locator(xpath).click()
+
+
+your test should write:
+
+GitActions.click(SIGN_IN_BUTTON)
+
+
+and all Playwright implementation should remain hidden inside your framework library.
+
+Recommended Enterprise Folder Structure
+github_automation_framework
+
+│
+├── environment
+│   ├── browser_manager.py
+│   ├── hooks.py
+│   ├── config_manager.py
+│   └── constants.py
+│
+├── functions
+│   ├── element_actions.py
+│   ├── wait_actions.py
+│   ├── browser_actions.py
+│   ├── assertion_actions.py
+│   ├── screenshot_actions.py
+│   └── javascript_actions.py
+│
+├── object_repository
+│   ├── home_page_objects.py
+│   ├── login_page_objects.py
+│   └── search_page_objects.py
+│
+├── pages
+│   ├── home_page.py
+│   ├── login_page.py
+│   └── search_page.py
+│
+├── testdata
+│   ├── login_data.json
+│   ├── search_data.json
+│   └── environment_data.json
+│
+├── utilities
+│   ├── logger.py
+│   ├── json_reader.py
+│   ├── excel_reader.py
+│   ├── random_generator.py
+│   └── report_manager.py
+│
+├── testcases
+│   ├── features
+│   │   ├── login.feature
+│   │   ├── search.feature
+│   │   └── smoke.feature
+│   │
+│   └── step_definitions
+│       ├── login_steps.py
+│       ├── search_steps.py
+│       └── common_steps.py
+│
+├── reports
+│
+├── screenshots
+│
+├── logs
+│
+├── requirements.txt
+│
+├── behave.ini
+│
+└── README.md
+
+Folder Responsibilities
+environment
+
+Framework configurations.
+
+browser_manager.py
+
+
+Responsible for:
+
+launch_browser()
+
+close_browser()
+
+navigate_url()
+
+functions
+
+This is the heart of your framework.
+
+Your automation engineer should use only these methods.
+
+element_actions.py
+click()
+
+enter_text()
+
+clear_text()
+
+double_click()
+
+right_click()
+
+hover()
+
+upload_file()
+
+wait_actions.py
+wait_for_visibility()
+
+wait_for_clickable()
+
+wait_for_hidden()
+
+wait_for_text()
+
+wait_for_page_load()
+
+browser_actions.py
+open_url()
+
+refresh_page()
+
+close_browser()
+
+switch_tab()
+
+go_back()
+
+go_forward()
+
+maximize_window()
+
+assertion_actions.py
+verify_equals()
+
+verify_contains()
+
+verify_true()
+
+verify_false()
+
+verify_title()
+
+verify_url()
+
+screenshot_actions.py
+capture_screenshot()
+
+capture_full_page()
+
+capture_failure_screenshot()
+
+Object Repository
+
+Store ONLY locators.
+
+home_page_objects.py
+class HomePageObjects:
+
+    SIGN_IN_LINK = "//a[contains(text(),'Sign in')]"
+
+    SEARCH_BOX = "//input[contains(@placeholder,'Search')]"
+
+    PRICING_LINK = "//a[contains(text(),'Pricing')]"
+
+
+No XPath should appear anywhere else.
+
+Pages Layer
+
+Contains business actions.
+
+home_page.py
+class HomePage:
+
+    def click_sign_in(self):
+
+        ElementActions.click(
+            HomePageObjects.SIGN_IN_LINK
+        )
+
+    def search_repository(self, value):
+
+        ElementActions.enter_text(
+            HomePageObjects.SEARCH_BOX,
+            value
+        )
+
+Test Data
+login_data.json
+{
+    "username":"sampleuser",
+    "password":"password"
+}
+
+search_data.json
+{
+    "repository":"playwright"
+}
+
+Feature File Structure
+login.feature
+@Smoke
+Feature: GitHub Login
+
+Scenario: Navigate To Login Page
+
+Given User launches GitHub website
+
+When User clicks Sign In link
+
+Then Login page should be displayed
+
+search.feature
+@Regression
+
+Feature: Repository Search
+
+Scenario: Search Repository
+
+Given User launches GitHub website
+
+When User searches repository "playwright"
+
+Then Repository results should be displayed
+
+Step Definitions
+
+Keep them lightweight.
+
+login_steps.py
+@given('User launches GitHub website')
+
+@when('User clicks Sign In link')
+
+@then('Login page should be displayed')
+
+
+No Playwright code here.
+
+Only call page methods.
+
+Hooks
+hooks.py
+
+Before Scenario
+
+launch_browser()
+
+
+After Scenario
+
+close_browser()
+
+
+Capture failure screenshots.
+
+take_failure_screenshot()
+
+Build Functions in This Order
+Stage 1
+
+Framework Foundation
+
+open_url()
+
+click()
+
+enter_text()
+
+get_text()
+
+is_visible()
+
+verify_equals()
+
+Stage 2
+
+Synchronization
+
+wait_for_visibility()
+
+wait_for_hidden()
+
+wait_for_page_load()
+
+Stage 3
+
+Advanced Interactions
+
+hover()
+
+double_click()
+
+right_click()
+
+drag_and_drop()
+
+upload_file()
+
+Stage 4
+
+Browser Utilities
+
+switch_tab()
+
+close_tab()
+
+refresh_page()
+
+get_title()
+
+get_url()
+
+Stage 5
+
+Reporting & Logs
+
+logger.info()
+
+logger.error()
+
+logger.warning()
+
+capture_screenshot()
+
+GitHub Automation Scope
+Smoke Suite
+Launch GitHub
+
+Validate Title
+
+Validate Logo
+
+Validate Sign In Link
+
+Validate Search Box
+
+Regression Suite
+Repository Search
+
+Repository Details
+
+Navigation Menus
+
+Pricing Page
+
+Solutions Page
+
+Explore Page
+
+Documentation Links
+
+Git Branch Strategy
+main
+
+develop
+
+feature/framework
+
+feature/login
+
+feature/search
+
+feature/reporting
+
+
+Workflow:
+
+git checkout -b feature/framework
+
+git add .
+
+git commit -m "Framework foundation created"
+
+git push origin feature/framework
+
+Future Enhancements
+
+After framework completion, add:
+
+Allure Reporting
+
+Parallel Execution
+
+Retry Mechanism
+
+Docker
+
+GitHub Actions
+
+Jenkins
+
+Scheduled Execution
+
+Email Reports
+
+Slack Notifications
+
+Recommended Learning Sequence
+Week 1
+Project Setup
+Folder Structure
+Browser Manager
+Click & Enter Text Functions
+Week 2
+Waits
+Assertions
+Logging
+Week 3
+GitHub Home Page Automation
+Page Object Model
+Week 4
+Search Functionality
+Regression Suite
+Week 5
+Reporting
+Screenshots
+Data Driven Framework
+Week 6
+GitHub Actions
+Scheduled Runs
+CI/CD
+
+This structure closely resembles what many mature enterprise automation projects use and will help you develop framework-design skills rather than just test-script-writing skills.
