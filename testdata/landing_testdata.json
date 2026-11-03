@@ -1,3 +1,14 @@
 {
-    "search_text": "Playwright"
+    "search_text": "Playwright",
+    "website_URL": "https://git-scm.com/",
+    "invalid_website_URL": "https://git-scm.com/invalid",
+    "download_page_URL": "https://git-scm.com/install/windows",
+    "about_page_URL": "https://git-scm.com/about",
+    "learn_page_URL": "https://git-scm.com/learn",
+    "tools_page_URL": "https://git-scm.com/tools",
+    "referance_page_URL": "https://git-scm.com/docs",
+    "install_page_URL":"https://git-scm.com/install/windows",
+    "community_page_URL": "https://git-scm.com/community",
+    "git_clon_txt": "git clone"
+
 }

@@ -1,0 +1,286 @@
+<testsuite name="landing.Git functional navigation" tests="16" errors="0" failures="0" skipped="10" time="16.469943" timestamp="2026-11-03T09:07:17.515164" hostname="6XVM0J3"><testcase classname="landing.Git functional navigation" name="Verify Download Page navigation" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional
+  Scenario: Verify Download Page navigation
+    Given User navigates to Git website ... skipped in 0.000s
+    When User clicks Download Button ... skipped in 0.000s
+    Then User should navigate to Download Page ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify About Page navigation" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional
+  Scenario: Verify About Page navigation
+    Given User navigates to Git website ... skipped in 0.000s
+    When User clicks About Menu ... skipped in 0.000s
+    Then User should navigate to About Page ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify Learn page navigation" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional
+  Scenario: Verify Learn page navigation
+    Given User navigates to Git website ... skipped in 0.000s
+    When User clicks Learn Menu ... skipped in 0.000s
+    Then User should navigate to Git Learn Page ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify Tools Page navigation" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional
+  Scenario: Verify Tools Page navigation
+    Given User navigates to Git website ... skipped in 0.000s
+    When User clicks Tools Menu ... skipped in 0.000s
+    Then User should navigate to Tools Page ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify menu navigation -- @1.1 " status="passed" time="3.034152"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional @Regression
+  Scenario Outline: Verify menu navigation -- @1.1 
+    Given User navigates to Git website ... passed in 2.869s
+    When User clicks 'About' ... passed in 0.163s
+    Then User should navigate to 'about_page_URL' ... passed in 0.002s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Browser closed
+
+Chrome Browser is Successfully Launched
+Browser is been maximised
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+
+
+]]>
+</system-err></testcase><testcase classname="landing.Git functional navigation" name="Verify menu navigation -- @1.2 " status="passed" time="2.933421"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional @Regression
+  Scenario Outline: Verify menu navigation -- @1.2 
+    Given User navigates to Git website ... passed in 2.774s
+    When User clicks 'Learn' ... passed in 0.157s
+    Then User should navigate to 'learn_page_URL' ... passed in 0.002s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Browser closed
+
+Chrome Browser is Successfully Launched
+Browser is been maximised
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+
+
+]]>
+</system-err></testcase><testcase classname="landing.Git functional navigation" name="Verify menu navigation -- @1.3 " status="passed" time="2.759992"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional @Regression
+  Scenario Outline: Verify menu navigation -- @1.3 
+    Given User navigates to Git website ... passed in 2.583s
+    When User clicks 'Tools' ... passed in 0.175s
+    Then User should navigate to 'tools_page_URL' ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Browser closed
+
+Chrome Browser is Successfully Launched
+Browser is been maximised
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+
+
+]]>
+</system-err></testcase><testcase classname="landing.Git functional navigation" name="Verify menu navigation -- @1.4 " status="passed" time="2.419881"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional @Regression
+  Scenario Outline: Verify menu navigation -- @1.4 
+    Given User navigates to Git website ... passed in 2.212s
+    When User clicks 'Reference' ... passed in 0.207s
+    Then User should navigate to 'referance_page_URL' ... passed in 0.002s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Browser closed
+
+Chrome Browser is Successfully Launched
+Browser is been maximised
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+
+
+]]>
+</system-err></testcase><testcase classname="landing.Git functional navigation" name="Verify menu navigation -- @1.5 " status="passed" time="2.734484"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional @Regression
+  Scenario Outline: Verify menu navigation -- @1.5 
+    Given User navigates to Git website ... passed in 2.443s
+    When User clicks 'Install' ... passed in 0.288s
+    Then User should navigate to 'install_page_URL' ... passed in 0.003s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Browser closed
+
+Chrome Browser is Successfully Launched
+Browser is been maximised
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+
+
+]]>
+</system-err></testcase><testcase classname="landing.Git functional navigation" name="Verify menu navigation -- @1.6 " status="passed" time="2.588013"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Functional @Regression
+  Scenario Outline: Verify menu navigation -- @1.6 
+    Given User navigates to Git website ... passed in 2.440s
+    When User clicks 'Community' ... passed in 0.146s
+    Then User should navigate to 'community_page_URL' ... passed in 0.002s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Browser closed
+
+Chrome Browser is Successfully Launched
+Browser is been maximised
+
+]]>
+</system-out><system-err>
+<![CDATA[
+Captured stderr:
+
+
+]]>
+</system-err></testcase><testcase classname="landing.Git functional navigation" name="Verify invalid URL handling" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Negative
+  Scenario: Verify invalid URL handling
+    Given User navigates to invalid Git URL ... skipped in 0.000s
+    Then Error page should be displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify browser refresh behavior" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Negative
+  Scenario: Verify browser refresh behavior
+    Given User navigates to Git website ... skipped in 0.000s
+    When User refreshes page ... skipped in 0.000s
+    Then Landing page should remain functional ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify Back navigation" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Negative
+  Scenario: Verify Back navigation
+    Given User navigates to Git website ... skipped in 0.000s
+    When User opens Downloads page ... skipped in 0.000s
+    And User navigates back ... skipped in 0.000s
+    Then Git landing page should be visible ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify browser refresh action" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Framework
+  Scenario: Verify browser refresh action
+    Given User navigates to Git website ... skipped in 0.000s
+    When User refreshes page ... skipped in 0.000s
+    Then Page should load successfully ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify browser back functionality" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Framework
+  Scenario: Verify browser back functionality
+    Given User navigates to Downloads page ... skipped in 0.000s
+    When User navigates back ... skipped in 0.000s
+    Then Git landing page should be visible ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="landing.Git functional navigation" name="Verify current URL retrieval" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Framework
+  Scenario: Verify current URL retrieval
+    Given User navigates to Git website ... skipped in 0.000s
+    Then User should be able to retrieve current URL ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

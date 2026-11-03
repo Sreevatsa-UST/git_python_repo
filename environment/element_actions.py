@@ -68,3 +68,37 @@ class ElementActions:
             raise Exception(
                 f"Failed to get text from locator '{locator}'. Error: {e}"
             )
+
+    # Exists
+    def exists(page, locator):
+        try:
+            return page.locator(locator).count() > 0
+        except Exception as e:
+            raise Exception(
+                f"Failed to verify existence of locator '{locator}'. Error: {e}"
+            )
+
+    # Not Exists
+    def not_exists(page, locator):
+        try:
+            if page.locator(locator).count() == 0:
+                return True
+
+            raise Exception(
+                f"Verification failed. Locator '{locator}' exists on the page."
+            )
+
+        except Exception as e:
+            raise Exception(
+                f"Failed to verify non-existence of locator '{locator}'. Error: {e}"
+            )
+
+    # Send Hot Keys 
+    def send_keys(page, locator, keys):
+        try:
+            page.locator(locator).press(keys)
+            return True
+        except Exception as e:
+            raise Exception(
+                f"Failed to send keys '{keys}' to locator '{locator}'. Error: {e}"
+        )

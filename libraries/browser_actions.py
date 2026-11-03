@@ -27,3 +27,23 @@ class BrowserActions:
             raise Exception(
                 f"Failed to get page title. Error: {e}"
             )
+
+    # Nagigate back to previous page
+    def navigate_back(page):
+        try:
+            page.go_back()
+            return True
+        except Exception as e:
+            raise Exception(
+                f"Failed to navigate back. Error: {e}"
+            )
+
+    # Navigate forward to next page
+    def navigate_forward(page):
+        try:
+            page.go_forward()
+            return True
+        except Exception as e:
+            raise Exception(
+                f"Failed to navigate forward. Error: {e}"
+            )
