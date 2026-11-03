@@ -1,0 +1,52 @@
+<testsuite name="smoke_test.Git Landing Page Validation" tests="4" errors="0" failures="0" skipped="4" time="0.0" timestamp="2026-11-03T09:07:22.374243" hostname="6XVM0J3"><testcase classname="smoke_test.Git Landing Page Validation" name="Verify Git landing page loads successfully" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke @LandingPage
+  Scenario: Verify Git landing page loads successfully
+    Given User navigates to Git website ... skipped in 0.000s
+    Then User verifies the page is loaded ... skipped in 0.000s
+    And User verifies the URL is "https://git-scm.com/" ... skipped in 0.000s
+    And User verifies the page title contains "Git" ... skipped in 0.000s
+    And User closes the browser ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke_test.Git Landing Page Validation" name="Verify Download Git is visible" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  Scenario: Verify Download Git is visible
+    Given User navigates to Git website ... skipped in 0.000s
+    Then User verifies Download Git is displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke_test.Git Landing Page Validation" name="Verify About menu is visible" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  Scenario: Verify About menu is visible
+    Given User navigates to Git website ... skipped in 0.000s
+    Then User verifies About menu is displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="smoke_test.Git Landing Page Validation" name="Verify Search textbox is available" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @Smoke
+  Scenario: Verify Search textbox is available
+    Given User navigates to Git website ... skipped in 0.000s
+    Then User verifies Search field is displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

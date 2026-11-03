@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
+_playwright_sessions = {}
+
+
 # Load Environement Variables
 def _load_env():
     config_path = Path(__file__).resolve().parent.parent / "config" / "environemnt.json"
@@ -27,6 +30,7 @@ def launch_browser():
             headless=env["headless"],
         )
 
+    _playwright_sessions[id(browser)] = playwright
     return browser
 
 # Maximize Browser
@@ -53,5 +57,10 @@ def is_page_loaded(page):
 
 # Close Browser
 def close_browser(browser):
-    browser.close()
+    playwright = _playwright_sessions.pop(id(browser), None)
+    try:
+        browser.close()
+    finally:
+        if playwright is not None:
+            playwright.stop()
     print("Browser closed")

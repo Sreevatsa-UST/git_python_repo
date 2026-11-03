@@ -1,0 +1,49 @@
+<testsuite name="ui_validation.Git UI Validation" tests="4" errors="0" failures="0" skipped="4" time="0.0" timestamp="2026-11-03T09:07:22.379425" hostname="6XVM0J3"><testcase classname="ui_validation.Git UI Validation" name="Verify Git logo visibility" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @UI
+  Scenario: Verify Git logo visibility
+    Given User navigates to Git website ... skipped in 0.000s
+    Then Git logo should be displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="ui_validation.Git UI Validation" name="Verify page header section" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @UI
+  Scenario: Verify page header section
+    Given User navigates to Git website ... skipped in 0.000s
+    Then Header section should be displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="ui_validation.Git UI Validation" name="Verify footer section" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @UI
+  Scenario: Verify footer section
+    Given User navigates to Git website ... skipped in 0.000s
+    Then Footer section should be displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="ui_validation.Git UI Validation" name="Verify all navigation menus are visible" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @UI
+  Scenario: Verify all navigation menus are visible
+    Given User navigates to Git website ... skipped in 0.000s
+    Then User should see all navigation menus ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

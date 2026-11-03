@@ -11,7 +11,7 @@ from browser_manager import maximize_browser
 from browser_manager import is_page_loaded
 from browser_manager import close_browser
 
-# from object_repository.landing_object import HomeObjects
+from object_repository.landing_page import HomeObjects
 
 from environment.data_read import get_test_data
 from environment.element_actions import ElementActions
@@ -48,11 +48,20 @@ pageLoad = is_page_loaded(page)
 
 # ElementActions.get_text(page, HomeObjects.landingPageAbout) #Get Text 
 
+# ElementActions.exists(page, HomeObjects.landingPageAbout) #Exists
+
+# ElementActions.not_exists(page, HomeObjects.landingPageAbout) #NotExists
+
+# send_keys(page, HomeObjects.landingSearchTab, "Enter") #Send HotKeys
+
 #### 
 
 # BrowserActions.current_url = BrowserActions.get_url(page) #Get Current Page URL
 
 # BrowserActions.title = BrowserActions.get_title(page) #Get Current Page URL
+
+# BrowserActions.navigate_back(page)
+# BrowserActions.navigate_forward(page)
 
 ####
 
@@ -75,6 +84,9 @@ pageLoad = is_page_loaded(page)
 ####
 
 # ScreenshotActios.capture_screenshot(page, "/screenshots/git_homepage.png")
+
+####
+
 
 input("Press Enter to close...")
 

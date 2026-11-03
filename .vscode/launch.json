@@ -1,0 +1,51 @@
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Behave: current feature",
+//             "type": "debugpy",
+//             "request": "launch",
+//             "module": "behave",
+//             "args": [
+//                 "${file}"
+//             ],
+//             "python": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+//             "cwd": "${workspaceFolder}",
+//             "console": "integratedTerminal"
+//         }
+//     ]
+// }
+
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Debug Behave",
+//             "type": "debugpy",
+//             "request": "launch",
+//             "module": "behave",
+//             "args": [
+//                 "--no-capture"
+//             ],
+//             "console": "integratedTerminal"
+//         }
+//     ]
+// }
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Single Scenario",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "behave",
+            "args": [
+                "-n",
+                "Verify Git landing page loads successfully",
+                "--no-capture"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
