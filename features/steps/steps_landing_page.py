@@ -2,11 +2,13 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT))
+sys.path.insert(0, str(PROJECT_ROOT / "environment"))
 
 from behave import given, then, when
 
-from environment.browser_manager import (
+from browser_manager import (
 	close_browser,
 	is_page_loaded,
 	launch_browser,
@@ -15,11 +17,11 @@ from environment.browser_manager import (
 
 from libraries.wait_actions import WaitActions
 from object_repository.landing_page import HomeObjects
-from environment.data_read import get_test_data
-from environment.navigation import navigate_to_url
+from data_read import get_test_data
+from navigation import navigate_to_url
 from libraries.assertion_actions import AssertionActions
 from libraries.browser_actions import BrowserActions
-from environment.element_actions import ElementActions
+from element_actions import ElementActions
 
 BASE_URL = get_test_data("website_URL")
 

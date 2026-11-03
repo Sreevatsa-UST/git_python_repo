@@ -18,7 +18,7 @@ Here’s a project-specific list of Python concepts used in the framework.
 - Classes and methods: grouping element, browser, wait, and assertion operations.
 - Decorators: using @given, @when, and @then to register Behave steps.
 - Variables and constants: storing page state and shared values such as BASE_URL.
--Dictionaries and JSON: loading browser configuration and test data by key.
+- Dictionaries and JSON: loading browser configuration and test data by key.
 - File handling: using pathlib.Path, __file__, and context managers to locate and read JSON files.
 - Exception handling: using try, except, and finally to report action failures and close browser resources.
 - String formatting: building dynamic locators with f-strings.
@@ -26,7 +26,6 @@ Here’s a project-specific list of Python concepts used in the framework.
 - Shared object state: storing the browser and page on Behave’s context so steps in a scenario can use them.
 - Callbacks and cleanup: registering a cleanup function to close the browser after a scenario.
 - Import-path handling: using sys.path to make project modules available to the step definitions.
-
 
 Playwright
 - Launching and closing a browser.
@@ -56,7 +55,6 @@ Test Design and Execution
 - Running one feature, one scenario, one outline row, or a tagged group.
 - Using dry runs and targeted runs to diagnose parsing, step-binding, and runtime failures.
 
-
 2. Current Framework Maturity
 The repository is a working learning prototype for browser automation against the Git website. It demonstrates reusable helpers, feature-driven 
 tests, menu navigation, search flows, browser lifecycle handling, and externalized data.
@@ -65,20 +63,21 @@ against the live site, and add consistent failure evidence and reporting. Allure
 and Jenkins are roadmap ideas, not features to claim as completed unless separately implemented.
 
 3. Management Showcase Pitch
-
-"I built a Python browser-automation framework using Playwright and Behave. It lets us describe user journeys in readable Given/When/Then scenarios 
+"I built a Python browser-automation framework using Playwright and Behave with Allure. It lets us describe user journeys in readable Given/When/Then scenarios 
 while keeping browser operations in reusable helper modules. The current examples cover landing-page checks, search behavior, and navigation, 
 including data-driven menu tests through Scenario Outlines. Browser settings and test data are externalized, and Behave tags let us run targeted 
 suites instead of always running everything. This gives us a practical foundation for repeatable UI testing and faster regression feedback. 
 The next step is to harden assertions and failure diagnostics, then integrate reporting and CI execution so the framework can provide dependable 
 feedback in the delivery pipeline."
 
-
 4. Concepts to Emphasize in a Demonstration
-
 - Readable behavior specifications with Gherkin.
 - Reusable Playwright actions called from Behave step definitions.
 - Separation of locators, test data, configuration, and test flow.
 - Parameterized scenarios that cover multiple menu destinations.
 - Tag, feature, and scenario selection for focused execution.
 - A clear next phase for stronger assertions, reporting, and CI integration.
+
+5. Capturing Screenshot for Failed Testcases
+
+- The framework captures screenshot in case of encountering an error while exection as evidence. 

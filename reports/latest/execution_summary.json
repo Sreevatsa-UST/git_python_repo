@@ -1,0 +1,11 @@
+{
+    "application": "https://git-scm.com",
+    "browser": "chrome",
+    "total_scenarios": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "execution_time": "10s",
+    "failure_screenshots": [],
+    "screenshot_errors": []
+}
