@@ -23,8 +23,8 @@ class ScreenshotActions:
 
         return screenshot_path.relative_to(project_root).as_posix()
 
-# Screeshot Actions
-class ScreenshotActios:
+# Full Screenshot Actions
+class FullScreenshotActions:
     def capture_screenshot(page, file_name):
         try:
             page.screenshot(

@@ -22,7 +22,7 @@ from libraries.wait_actions import WaitActions
 
 from libraries.assertion_actions import AssertionActions
 
-from libraries.screenshot_actions import ScreenshotActios
+from libraries.screenshot_actions import FullScreenshotActions
 
 browser = launch_browser()
 
@@ -64,8 +64,7 @@ pageLoad = is_page_loaded(page)
 # AssertionActions.verify_contains(BrowserActions.get_url(page), "git") #Verify Contains
 
 #### Screenshot Actions ####
-# ScreenshotActios.capture_failure_screenshot(page, "/screenshots/git_homepage.png") #Capture Screenshot
-# ScreenshotActios.capture_screenshot(page, "/screenshots/git_homepage.png")
+FullScreenshotActions.capture_screenshot(page, "/screenshots/git_homepage.png")
 
 input("Press Enter to close...")
 
